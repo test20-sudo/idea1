@@ -152,7 +152,7 @@ html_template = '''
 <br><br>
       <form id="idea-form">
         <div class="form-group">
-          <label for="user_input" class="typewriter">Yo, enter what are you thinking. Lets make a research out of it.</label><br>
+          <label for="user_input" class="typewriter">Yo, enter what are you thinking.</label><br>
           <input type="text" class="form-control" id="user_input" name="user_input" required>
         </div>
         <center><button type="submit" class="btn btn-primary">Generate</button></center>
