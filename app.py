@@ -32,7 +32,7 @@ def generate():
     input1 = str(keywords)
     
     messages = [
-        ChatMessage(role="user", content=f"Generate 10 research ideas based on the keywords: {input1}. Describe how it can be done with technical details and a rough idea of methodology. Dont highlight the heading")
+        ChatMessage(role="user", content=f"Generate 10 research ideas (like proper research paper title like) based on the keywords: {input1}. Describe how it can be done with technical details and a rough idea of methodology. Dont highlight the heading")
     ]
 
     chat_response = client.chat(model=model, messages=messages)
@@ -142,6 +142,23 @@ html_template = '''
     font-style: normal;
     font-variation-settings: "wdth" 100;
   }
+  .btn-secondary {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  color: white !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268 !important;
+  border-color: #545b62 !important;
+}
+
+.btn-secondary:active {
+  background-color: #545b62 !important;
+  border-color: #4e555b !important;
+  color: white !important;
+}
     </style>
   </head>
   <body>
@@ -153,9 +170,12 @@ html_template = '''
       <form id="idea-form">
         <div class="form-group">
           <label for="user_input" class="typewriter">Yo, enter what are you thinking.</label><br>
-          <input type="text" class="form-control" id="user_input" name="user_input" required>
+          <input type="text" class="form-control" id="user_input" name="user_input" required> 
         </div>
-        <center><button type="submit" class="btn btn-primary">Generate</button></center>
+        <center>
+    <button type="submit" class="btn btn-primary">Generate</button>
+    <a href="https://www.citewise.tech/toolkitspage.html" class="btn btn-secondary ml-2">Go Back</a>
+  </center>
       </form>
       <div id="ideas-container" class="mt-4" style="display: none;">
         <h2>Generated Research Topics:</h2>
