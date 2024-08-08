@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Initialize the Mistral client and spaCy model
 model = "mistral-large-latest"
-client = MistralClient(api_key="azyEN3ZYjcvg964D8U99slt0JzY5jG4F")
+client = MistralClient(api_key="SKYjG5bL2rn3nnMwhNtXazBs0MFNteih")
 nlp = spacy.load("en_core_web_sm")
 
 def extract_keywords(text):
